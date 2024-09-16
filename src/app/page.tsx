@@ -48,7 +48,7 @@ export default function LoginForm() {
         password,
         firstName + " " + lastName
       );
-      setUser(userCredential.user);
+      // setUser(userCredential.user);
     } catch (error) {
       console.error("Signup failed", error);
     }

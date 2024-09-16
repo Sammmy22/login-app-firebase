@@ -37,7 +37,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     });
 
     return () => unsubscribe();
-  }, []);
+  }, [user]);
 
   const loginWithEmail = async (email: string, password: string) => {
     try {
@@ -87,6 +87,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     <AuthContext.Provider
       value={{
         user,
+        setUser,
         loading,
         error,
         loginWithEmail,
